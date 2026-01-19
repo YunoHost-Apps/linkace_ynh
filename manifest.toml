@@ -4,8 +4,8 @@ packaging_format = 2
 
 id = "linkace"
 name = "LinkAce"
-description.en = "LinkAce is a self-hosted archive to collect links of your favorite websites."
-description.fr = "LinkAce est une archive auto-hébergée permettant de rassembler les liens de vos sites web préférés"
+description.en = "A self-hosted archive to collect links of your favorite websites."
+description.fr = "Une archive auto-hébergée permettant de rassembler les liens de vos sites web préférés"
 
 version = "2.4.2~ynh1"
 
@@ -27,9 +27,9 @@ helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
-ldap = "false"
+ldap = false
 
-sso = "false"
+sso = false
 
 disk = "50M"
 ram.build = "50M"
