@@ -41,9 +41,9 @@ chown "$app:$app" "$install_dir/.env"
 ynh_script_progression "Installing $app..."
 
 pushd $install_dir
-    php artisan migrate --force -n
-    php artisan setup:complete --force -n
-    php artisan registeruser --admin "$admin" "$admin_mail" "$password"
+    php$php_version artisan migrate --force -n
+    php$php_version artisan setup:complete --force -n
+    php$php_version artisan registeruser --admin "$admin" "$admin_mail" "$password"
 popd
 
 #=================================================
