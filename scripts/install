@@ -10,7 +10,7 @@ source /usr/share/yunohost/helpers
 # INITIALIZE AND STORE SETTINGS
 #=================================================
 
-secret==$(ynh_string_random --length=36)
+secret==$(ynh_string_random --length=32)
 ynh_app_setting_set --key=secret --value=$secret
 
 admin_mail=$(ynh_user_get_info --username=$admin --key=mail)
