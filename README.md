@@ -8,7 +8,7 @@ It shall NOT be edited by hand.
   LinkAce, packaged for YunoHost
 </h1>
 
-LinkAce is a self-hosted archive to collect links of your favorite websites.
+A self-hosted archive to collect links of your favorite websites.
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://www.linkace.org/)
 [![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://demo.linkace.org/)
