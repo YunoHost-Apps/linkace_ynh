@@ -19,10 +19,6 @@ LinkAce is a self-hosted archive to collect links of your favorite websites.
 <a href="https://github.com/YunoHost-Apps/linkace_ynh/issues"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_report_an_issue.svg"/></a>
 </div>
 
-
-## Screenshots
-![Screenshot of LinkAce](./doc/screenshots/example.jpg)
-
 ## 📦 Developer info
 
 [![Automatic tests level](https://apps.yunohost.org/badge/cilevel/linkace)](https://ci-apps.yunohost.org/ci/apps/linkace/)
