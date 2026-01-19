@@ -35,14 +35,21 @@ chmod 400 "$install_dir/.env"
 chown "$app:$app" "$install_dir/.env"
 
 #=================================================
+# INSTALL COMPOSER DEPENDENCIES
+#=================================================
+ynh_script_progression "Installing composer dependencies..."
+
+ynh_composer_exec install --no-dev
+
+#=================================================
 # APP INSTALL
 #=================================================
 ynh_script_progression "Installing $app..."
 
 pushd $install_dir
-    php$php_version artisan migrate --force -n
-    php$php_version artisan setup:complete --force -n
-    php$php_version artisan registeruser --admin "$admin" "$admin_mail" "$password"
+    ynh_exec_as_app php$php_version artisan migrate --force -n
+    ynh_exec_as_app php$php_version artisan setup:complete --force -n
+    ynh_exec_as_app php$php_version artisan registeruser --admin "$admin" "$admin_mail" "$password"
 popd
 
 #=================================================
