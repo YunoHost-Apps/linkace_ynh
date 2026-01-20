@@ -47,6 +47,7 @@ ynh_script_progression "Installing composer dependencies..."
 ynh_script_progression "Installing $app..."
 
 pushd $install_dir
+    chmod +x artisan
     ynh_exec_as_app php$php_version artisan key:generate --force -n
     ynh_exec_as_app php$php_version artisan migrate --force -n
     ynh_exec_as_app php$php_version artisan setup:complete -n
