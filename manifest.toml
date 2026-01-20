@@ -61,7 +61,7 @@ ram.runtime = "50M"
     [resources.sources.main]
     url = "https://github.com/Kovah/LinkAce/releases/download/v2.4.2/linkace-v2.4.2.zip"
     sha256 = "563c60d25abfbefa7132bf29e9ef8ddcfba43d0aeafe3c886a0e232930480d3c"
-    in_subdir = true
+    in_subdir = false
 
     autoupdate.strategy = "latest_github_release"
 
