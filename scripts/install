@@ -16,6 +16,8 @@ ynh_app_setting_set --key=secret --value=$secret
 admin_mail=$(ynh_user_get_info --username=$admin --key=mail)
 mail_user="noreply"
 
+redis_db=$(ynh_redis_get_free_db)
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
