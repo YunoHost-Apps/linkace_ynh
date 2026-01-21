@@ -47,6 +47,11 @@ pushd $install_dir
     ynh_exec_as_app php$php_version artisan registeruser --admin "$admin" "$admin_mail" "$password"
 popd
 
+# file was touched by artisan, rehash it
+ynh_store_file_checksum "$install_dir/.env"
+secret=$(cat $install_dir/.env | grep -e ^APP_KEY | cut -c 9-)
+ynh_app_setting_set --key=secret --value=$secret
+
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
