@@ -7,6 +7,14 @@
 source /usr/share/yunohost/helpers
 
 #=================================================
+# ENSURE DOWNWARDS COMPATIBILITY
+#=================================================
+if [ -z "${redis_db:-}" ]; then
+    redis_db=$(grep REDIS_DB= "$install_dir/.env" | sed s/REDIS_DB=//)
+    ynh_app_setting_set --app="$app" --key=redis_db --value="$redis_db"
+fi
+
+#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Upgrading source files..."
