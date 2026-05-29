@@ -7,7 +7,7 @@ name = "LinkAce"
 description.en = "A self-hosted archive to collect links of your favorite websites."
 description.fr = "Une archive auto-hébergée permettant de rassembler les liens de vos sites web préférés"
 
-version = "2.4.2~ynh1"
+version = "2.5.7~ynh1"
 
 maintainers = ["DeMiro5001"]
 
@@ -55,11 +55,12 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/Kovah/LinkAce/releases/download/v2.4.2/linkace-v2.4.2.zip"
-    sha256 = "563c60d25abfbefa7132bf29e9ef8ddcfba43d0aeafe3c886a0e232930480d3c"
+    url = "https://github.com/Kovah/LinkAce/releases/download/v2.5.7/linkace-v2.5.7.zip"
+    sha256 = "0644d22f8a7ce6102784c7e1a0e97c098d12620f56e59db6e24fae08b832aa0b"
     in_subdir = false
 
     autoupdate.strategy = "latest_github_release"
+    autoupdate.asset = "linkace-v\\d+\\.\\d+\\.\\d+\\.zip"
 
     [resources.system_user]
     allow_email = true
