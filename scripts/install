@@ -17,6 +17,7 @@ admin_mail=$(ynh_user_get_info --username=$admin --key=mail)
 mail_user="noreply"
 
 redis_db=$(ynh_redis_get_free_db)
+ynh_app_setting_set --key=redis_db --value="$redis_db"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
