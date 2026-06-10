@@ -19,8 +19,9 @@ fi
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env"
-
+ynh_setup_source --dest_dir="$install_dir" --full_replace
+ynh_config_add --template="../conf/.env.example" --destination="$install_dir/.env"
+chmod 600 "$install_dir/.env"
 chown -R "$app:www-data" "$install_dir"
 
 #=================================================
